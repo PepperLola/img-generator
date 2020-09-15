@@ -11,7 +11,7 @@ router.get('/', function(req, res, next) {
   let border = 1;
   let textColor = '#000';
   let progress = 0.5;
-  let fontSize = '14pt';
+  let fontSize = 14;
   if (req.query.width) {
     width = req.query.width;
   }
@@ -39,7 +39,7 @@ router.get('/', function(req, res, next) {
   if (req.query.font_size) {
     fontSize = req.query.font_size;
   }
-  let font = `bold ${fontSize} Menlo`;
+  let font = `bold ${fontSize}pt Roboto`;
   if (req.query.font) {
     font = req.query.font;
   }
@@ -54,11 +54,12 @@ router.get('/', function(req, res, next) {
   context.fillRect(border, border, (width - (border * 2)) * progress, (height - (border * 2)) * progress);
 
   let text = progress * 100 + "%";
-  let textWidth = context.measureText(text).width;
 
   context.fillStyle = textColor;
   context.font = font;
-  context.fillText(text, (width - textWidth)/ 2, height / 2);
+  context.textBaseline = "middle";
+  context.textAlign = "center";
+  context.fillText(text,width / 2,height / 2);
 
   res.contentType('png');
   res.send(canvas.toBuffer('image/png'));
