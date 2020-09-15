@@ -44,7 +44,7 @@ router.get('/', function(req, res, next) {
     font = req.query.font;
   }
 
-  let canvas = createCanvas(width, height);
+  let canvas = createCanvas(parseInt(width), parseInt(height));
   const context = canvas.getContext('2d');
 
   context.fillStyle = bg;
