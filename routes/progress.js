@@ -51,7 +51,7 @@ router.get('/', function(req, res, next) {
   context.fillRect(0, 0, width, height);
 
   context.fillStyle = fg;
-  context.fillRect(border, border, (width - (border * 2)) * progress, (height - (border * 2)) * progress);
+  context.fillRect(border, border, (width - (border * 2)) * progress, height - (border * 2));
 
   let text = progress * 100 + "%";
 
