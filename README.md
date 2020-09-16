@@ -1,5 +1,11 @@
 # Image Generator
 
+[![HitCount](http://hits.dwyl.com/PepperLola/img-generator.svg)](http://hits.dwyl.com/PepperLola/img-generator)
+![Website](https://img.shields.io/website?style=flat-square&url=https%3A%2F%2Fwidgets.jerlshoba.com)
+![GitHub top language](https://img.shields.io/github/languages/top/PepperLola/img-generator?style=flat-square)
+![GitHub issues](https://img.shields.io/github/issues/PepperLola/img-generator?style=flat-square)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/PepperLola/img-generator?style=flat-square)
+
 ### Generates widgets to include in websites and READMEs, etc.
 
 ## Base Url
