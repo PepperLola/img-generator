@@ -8,6 +8,7 @@ const http = require('http');
 
 const indexRouter = require('./routes/index');
 const progressRouter = require('./routes/progress');
+const semiRadialProgressRouter = require('./routes/semiRadialProgress');
 
 const app = express();
 
@@ -25,6 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/progress.png', progressRouter);
+app.use('/semiRadialProgress.png', semiRadialProgressRouter);
 
 module.exports = app;
 
