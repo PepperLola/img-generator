@@ -11,7 +11,7 @@ All widgets are available [here](https://widgets.jerlshoba.com).
 
 ## Progress Bar
 
-### Endpoint
+### Endpoint:
 [url]/progress.png
 
 ### Description:
