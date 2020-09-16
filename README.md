@@ -41,7 +41,7 @@ Generates a progress bar.
 
 ### Example Request:
 `[url]/progress.png?width=512&height=64&fg=%23ffffff&bg=%232288ff&border=4&text_color=%232288ff&progress=0.75&font_size=18` would result in  
-![Result](https://widgets.jerlshoba.com/progress.png?width=512&height=64&fg=%23ffffff&bg=%232288ff&border=4&text_color=%232288ff&progress=0.75&font_size=18)
+[![Result](https://widgets.jerlshoba.com/progress.png?width=512&height=64&fg=%23ffffff&bg=%232288ff&border=4&text_color=%232288ff&progress=0.75&font_size=18)](https://widgets.jerlshoba.com/progress.png?width=512&height=64&fg=%23ffffff&bg=%232288ff&border=4&text_color=%232288ff&progress=0.75&font_size=18)
 
 ### Note:
 All colors are in hex format.  
