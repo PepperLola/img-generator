@@ -12,7 +12,7 @@ All widgets are available [here](https://widgets.jerlshoba.com).
 ## Progress Bar
 
 ### Endpoint:
-[url]/progress.png
+`[url]/progress.png`
 
 ### Description:
 Generates a progress bar.
@@ -28,7 +28,7 @@ Generates a progress bar.
 `font_size`: Size of the font (e.g. `14` = 14pt font)  
 `font`: Overrides the font (e.g. `bold 14pt Roboto` = 14pt bold Roboto)  
 
-### Defaults
+### Defaults:
 `width`: Defaults to 256px  
 `height`: Defaults to 32px  
 `fg`: Defaults to white (`#ffffff`)  
@@ -39,11 +39,11 @@ Generates a progress bar.
 `font_size`: Defaults to 14pt  
 `font`: Defaults to bold 14pt sans-serif  
 
-### Example Request
+### Example Request:
 `[url]/progress.png?width=512&height=64&fg=%23ffffff&bg=%232288ff&border=4&text_color=%232288ff&progress=0.75&font_size=18` would result in  
 ![Result](https://widgets.jerlshoba.com/progress.png?width=512&height=64&fg=%23ffffff&bg=%232288ff&border=4&text_color=%232288ff&progress=0.75&font_size=18)
 
-### Note
+### Note:
 All colors are in hex format.  
 Hash symbol `#` must be URI encoded `%23`, or the browser will think you are referring to an anchor.  
 **Do not** include the unit in any parameters (`pt`, `px`)
