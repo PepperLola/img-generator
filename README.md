@@ -85,8 +85,8 @@ Plus all Progress Bar defaults.
 ## Semi-Radial Progress Bar
 
 ### Endpoint:
-`[url]/raidalProgress.png`  
-`[url]/raidalProgress.jpg`  
+`[url]/radialProgress.png`  
+`[url]/radialProgress.jpg`  
 
 ### Description:
 Generates a circular progress bar.
