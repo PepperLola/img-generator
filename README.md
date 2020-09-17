@@ -47,7 +47,29 @@ Generates a progress bar.
 
 ### Example Request:
 `[url]/progress.png?width=512&height=64&fg=%23ffffff&bg=%232288ff&border=4&text_color=%232288ff&progress=0.75&font_size=18` would result in  
-[![Result](https://widgets.jerlshoba.com/progress.png?width=512&height=64&fg=%23ffffff&bg=%232288ff&border=4&text_color=%232288ff&progress=0.75&font_size=18)](https://widgets.jerlshoba.com/progress.png?width=512&height=64&fg=%23ffffff&bg=%232288ff&border=4&text_color=%232288ff&progress=0.75&font_size=18)
+[![Progress Bar](https://widgets.jerlshoba.com/progress.png?width=512&height=64&fg=%23ffffff&bg=%232288ff&border=4&text_color=%232288ff&progress=0.75&font_size=18)](https://widgets.jerlshoba.com/progress.png?width=512&height=64&fg=%23ffffff&bg=%232288ff&border=4&text_color=%232288ff&progress=0.75&font_size=18)
+
+## Semi-Radial Progress Bar
+
+### Endpoint:
+`[url]/semiRadialProgress.png`
+
+### Description:
+Generates a circular progress bar.
+
+### Parameters:
+`fg_rounded`: Whether to round the foreground
+`bg_rounded`: Whether to round the background
+Plus all Progress Bar parameters.
+
+### Defaults:
+`fg_rounded`: Defaults to true
+`bg_rounded`: Defaults to true
+Plus all Progress Bar defaults.
+
+### Example Request:
+`[url]/semiRadialProgress.png?width=256&height=256&fg=%23ffffff&bg=%232288ff&border=0&text_color=%232288ff&progress=0.75&font_size=16&fg_rounded=true&bg_rounded=true` would result in  
+[![Semi-Radial Progress Bar](https://widgets.jerlshoba.com/semiRadialProgress.png?width=256&height=256&fg=%23ffffff&bg=%232288ff&border=0&text_color=%232288ff&progress=0.75&font_size=16&fg_rounded=true&bg_rounded=true)](https://widgets.jerlshoba.com/semiRadialProgress.png?width=256&height=256&fg=%23ffffff&bg=%232288ff&border=0&text_color=%232288ff&progress=0.75&font_size=16&fg_rounded=true&bg_rounded=true)
 
 ### Note:
 All colors are in hex format.  
