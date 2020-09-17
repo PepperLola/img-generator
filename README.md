@@ -2,6 +2,7 @@
 
 [![HitCount](http://hits.dwyl.com/PepperLola/img-generator.svg)](http://hits.dwyl.com/PepperLola/img-generator)
 ![Website](https://img.shields.io/website?style=flat-square&url=https%3A%2F%2Fwidgets.jerlshoba.com)
+[![GitHub stars](https://img.shields.io/github/stars/PepperLola/img-generator?color=yellow&style=flat-square)](https://github.com/PepperLola/img-generator/stargazers)  
 ![GitHub top language](https://img.shields.io/github/languages/top/PepperLola/img-generator?style=flat-square)
 ![GitHub issues](https://img.shields.io/github/issues/PepperLola/img-generator?style=flat-square)
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/PepperLola/img-generator?style=flat-square)
