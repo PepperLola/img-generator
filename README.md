@@ -97,8 +97,8 @@ Same as Semi-Radial Progress Bar.
 Same as Semi-Radial Progress Bar.
 
 ### Example Request:
-`[url]/radialProgress.png?width=256&height=256&fg=%23ffffff&bg=%232288ff&border=0&text_color=%232288ff&progress=0.75&font_size=16&fg_rounded=true&bg_rounded=true` would result in  
-[![Radial Progress Bar](https://widgets.jerlshoba.com/radialProgress.png?width=256&height=256&fg=%23ffffff&bg=%232288ff&border=0&text_color=%232288ff&progress=0.75&font_size=16&fg_rounded=true&bg_rounded=true)](https://widgets.jerlshoba.com/semiRadialProgress.png?width=256&height=256&fg=%23ffffff&bg=%232288ff&border=0&text_color=%232288ff&progress=0.75&font_size=16&fg_rounded=true&bg_rounded=true)
+`[url]/radialProgress.png?width=256&height=256&fg=%232288ff&bg=%23000000&border=0&text_color=%232288ff&progress=0.75&font_size=16&fg_rounded=true&bg_rounded=true&show_bg=false` would result in  
+[![Radial Progress Bar](https://widgets.jerlshoba.com/radialProgress.png?width=256&height=256&fg=%232288ff&bg=%23000000&border=0&text_color=%232288ff&progress=0.75&font_size=16&fg_rounded=true&bg_rounded=true&show_bg=false)](https://widgets.jerlshoba.com/semiRadialProgress.png?width=256&height=256&fg=%232288ff&bg=%23000000&border=0&text_color=%232288ff&progress=0.75&font_size=16&fg_rounded=true&bg_rounded=true&show_bg=false)
 
 
 ### Note:
