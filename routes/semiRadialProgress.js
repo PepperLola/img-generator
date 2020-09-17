@@ -11,6 +11,8 @@ const createImage = (req) => {
   let textColor = '#000';
   let progress = 0.5;
   let fontSize = 14;
+  let fgRounded = true;
+  let bgRounded = true;
   if (req.query.width) {
     width = parseInt(req.query.width);
   }
@@ -45,6 +47,12 @@ const createImage = (req) => {
   if (req.query.font) {
     font = req.query.font;
   }
+  if (req.query.fg_rounded) {
+    fgRounded = req.query.fg_rounded === "true";
+  }
+  if (req.query.bg_rounded) {
+    bgRounded = req.query.bg_rounded === "true";
+  }
 
   let canvas = createCanvas(width, height);
   const context = canvas.getContext('2d');
@@ -52,6 +60,7 @@ const createImage = (req) => {
 
   context.strokeStyle = bg;
   context.lineWidth = 10;
+  context.lineCap = bgRounded ? "round" : "square";
   context.beginPath();
   context.arc(width / 2, height / 2, width / 3, (3 / 4) * Math.PI, (1 / 4) * Math.PI);
   context.stroke();
@@ -68,6 +77,7 @@ const createImage = (req) => {
     border = 0;
   }
 
+  context.lineCap = fgRounded ? "round" : "butt";
   context.beginPath();
   context.arc(width / 2, height / 2, width / 3, (3 / 4) * Math.PI + (border / width), endAngle - (border / width) * (progress * 100 < border ? -1 : 1));
   context.stroke();
