@@ -13,7 +13,7 @@ const createImage = (req) => {
   let fontSize = 14;
   let fgRounded = true;
   let bgRounded = true;
-  let showBG = true;
+  let showBG = false;
   let bgWidth = 10;
   let fgWidth = 5;
   let displayString = "[progress]%";
@@ -81,7 +81,7 @@ const createImage = (req) => {
     context.lineWidth = bgWidth;
     context.lineCap = bgRounded ? "round" : "square";
     context.beginPath();
-    context.arc(width / 2, height / 2, width / 3, (3 / 4) * Math.PI, (1 / 4) * Math.PI);
+    context.arc(width / 2, height / 2, width / 3, (3 / 2) * Math.PI, (3 / 2) * Math.PI - 1 / 1000);
     context.stroke();
   }
 
@@ -99,7 +99,7 @@ const createImage = (req) => {
 
   context.lineCap = fgRounded ? "round" : "butt";
   context.beginPath();
-  context.arc(width / 2, height / 2, width / 3, (3 / 4) * Math.PI + (border / width), endAngle - (border / width) * (progress * 100 < border ? -1 : 1));
+  context.arc(width / 2, height / 2, width / 3, (3 / 2) * Math.PI, (-1 / 2) * Math.PI + (2 * Math.PI * progress) - 1 / 1000);
   context.stroke();
 
   // context.fillStyle = fg;
@@ -115,14 +115,14 @@ const createImage = (req) => {
 }
 
 /* GET users listing. */
-router.get('/semiRadialProgress.png', function (req, res, next) {
+router.get('/radialProgress.png', function (req, res, next) {
   let canvas = createImage(req);
 
   res.contentType('png');
   res.send(canvas.toBuffer('image/png'));
 });
 
-router.get('/semiRadialProgress.jpg', function (req, res, next) {
+router.get('/radialProgress.jpg', function (req, res, next) {
   let canvas = createImage(req);
 
   res.contentType('jpg');

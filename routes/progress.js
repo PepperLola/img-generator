@@ -11,6 +11,8 @@ const createImage = (req) => {
   let textColor = '#000';
   let progress = 0.5;
   let fontSize = 14;
+  let showBG = true;
+  let displayString = "[progress]%";
   if (req.query.width) {
     width = req.query.width;
   }
@@ -42,33 +44,49 @@ const createImage = (req) => {
   if (req.query.font) {
     font = req.query.font;
   }
+  if (req.query.show_bg) {
+    showBG = req.query.show_bg === "true";
+  }
+  if (req.query.display_string) {
+    displayString = req.query.display_string;
+  }
+
+  /* Process display string */
+  displayString = displayString.split("[progress]").join((progress * 100).toString());
 
   let canvas = createCanvas(parseInt(width), parseInt(height));
   const context = canvas.getContext('2d');
 
-  context.fillStyle = bg;
-  context.fillRect(0, 0, width, height);
+  if (showBG) {
+    context.fillStyle = bg;
+    context.fillRect(0, 0, width, height);
+  }
 
   context.fillStyle = fg;
   context.fillRect(border, border, (width - (border * 2)) * progress, height - (border * 2));
-
-  let text = progress * 100 + "%";
 
   context.fillStyle = textColor;
   context.font = font;
   context.textBaseline = "middle";
   context.textAlign = "center";
-  context.fillText(text, width / 2, height / 2);
+  context.fillText(displayString, width / 2, height / 2);
 
   return canvas;
 }
 
 /* GET users listing. */
-router.get('/', function (req, res, next) {
+router.get('/progress.png', function (req, res, next) {
   let canvas = createImage(req);
 
   res.contentType('png');
   res.send(canvas.toBuffer('image/png'));
+});
+
+router.get('/progress.jpg', function (req, res, next) {
+  let canvas = createImage(req);
+
+  res.contentType('jpg');
+  res.send(canvas.toBuffer('image/jpeg'));
 });
 
 module.exports = router;
