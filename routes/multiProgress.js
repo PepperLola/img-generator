@@ -52,7 +52,7 @@ const createImage = (req, res) => {
     if (req.query.progress_list) {
         progressList = req.query.progress_list.split(',');
         for (let i in progressList) {
-            progressList[i] = progressList[i];
+            progressList[i] = parseFloat(progressList[i]);
         }
     }
     if (req.query.color_list) {
@@ -60,7 +60,7 @@ const createImage = (req, res) => {
     }
 
     /* Process display string */
-    // displayString = displayString.split("[progress]").join((progress * 100).toString());
+    displayString = displayString.split("[progress]").join((progressList.reduce((a, b) => a + b, 0) * 100).toFixed(0).toString());
 
     let canvas = createCanvas(parseInt(width), parseInt(height));
     const context = canvas.getContext('2d');

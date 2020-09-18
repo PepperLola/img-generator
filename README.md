@@ -55,7 +55,7 @@ Generates a progress bar.
 `[url]/progress.png?width=512&height=64&fg=%23ffffff&bg=%232288ff&border=4&text_color=%232288ff&progress=0.75&font_size=18` would result in  
 [![Progress Bar](https://widgets.jerlshoba.com/progress.png?width=512&height=64&fg=%23ffffff&bg=%232288ff&border=4&text_color=%232288ff&progress=0.75&font_size=18)](https://widgets.jerlshoba.com/progress.png?width=512&height=64&fg=%23ffffff&bg=%232288ff&border=4&text_color=%232288ff&progress=0.75&font_size=18)
 
-## Radial Progress Bar
+## Semi-Radial Progress Bar
 
 ### Endpoint:
 `[url]/semiRadialProgress.png`  
@@ -82,7 +82,7 @@ Plus all Progress Bar defaults.
 `[url]/semiRadialProgress.png?width=256&height=256&fg=%23ffffff&bg=%232288ff&border=0&text_color=%232288ff&progress=0.75&font_size=16&fg_rounded=true&bg_rounded=true` would result in  
 [![Semi-Radial Progress Bar](https://widgets.jerlshoba.com/semiRadialProgress.png?width=256&height=256&fg=%23ffffff&bg=%232288ff&border=0&text_color=%232288ff&progress=0.75&font_size=16&fg_rounded=true&bg_rounded=true)](https://widgets.jerlshoba.com/semiRadialProgress.png?width=256&height=256&fg=%23ffffff&bg=%232288ff&border=0&text_color=%232288ff&progress=0.75&font_size=16&fg_rounded=true&bg_rounded=true)
 
-## Semi-Radial Progress Bar
+## Radial Progress Bar
 
 ### Endpoint:
 `[url]/radialProgress.png`  
@@ -100,6 +100,81 @@ Same as Semi-Radial Progress Bar.
 ### Example Request:
 `[url]/radialProgress.png?width=256&height=256&fg=%232288ff&bg=%23000000&border=0&text_color=%232288ff&progress=0.75&font_size=16&fg_rounded=true&bg_rounded=true&show_bg=false` would result in  
 [![Radial Progress Bar](https://widgets.jerlshoba.com/radialProgress.png?width=256&height=256&fg=%232288ff&bg=%23000000&border=0&text_color=%232288ff&progress=0.75&font_size=16&fg_rounded=true&bg_rounded=true&show_bg=false)](https://widgets.jerlshoba.com/semiRadialProgress.png?width=256&height=256&fg=%232288ff&bg=%23000000&border=0&text_color=%232288ff&progress=0.75&font_size=16&fg_rounded=true&bg_rounded=true&show_bg=false)
+
+## Multi-Progress Bar
+
+### Endpoint:
+`[url]/multiProgress.png`  
+`[url]/multiProgress.jpg`  
+
+### Description:
+Generates a segmented progress bar.
+
+### Parameters:
+Same as Progress Bar **EXCEPT**  
+`items`: List of items to be rendered (pointless at the moment, but still necessary)  
+`progress_list`: Progress values for each item in the list (this will be used **instead** of `progress`)  
+`color_list`: **Optional**, the list of colors the segments will be  
+
+### Defaults:
+Same as Progress Bar **EXCEPT**  
+`items`: Defaults to an empty list  
+`progress_list`: Defaults to an empty list  
+`color_list`: Chooses a random color for each segment that wasn't manually assigned a color.
+
+### Example Request:
+`[url]/multiProgress.png?items=hello,hi,hi,hi&progress_list=0.25,0.25,0.25,0.125&color_list=%23000000,%23ff0000,%2300ff00,%230000ff` would result in  
+[![Multi-Progress Bar](https://widgets.jerlshoba.com/multiProgress.png?items=hello,hi,hi,hi&progress_list=0.25,0.25,0.25,0.125&color_list=%23000000,%23ff0000,%2300ff00,%230000ff)](https://widgets.jerlshoba.com/multiProgress.png?items=hello,hi,hi,hi&progress_list=0.25,0.25,0.25,0.125&color_list=%23000000,%23ff0000,%2300ff00,%230000ff)
+
+## Multi-Semi-Radial Progress Bar
+
+### Endpoint:
+`[url]/multiSemiRadialProgress.png`  
+`[url]/multiSemiRadialProgress.jpg`  
+
+### Description:
+Generates a segmented semi-radial progress bar.
+
+### Parameters:
+Same as Semi-Radial Progress Bar **EXCEPT**  
+`items`: List of items to be rendered (pointless at the moment, but still necessary)  
+`progress_list`: Progress values for each item in the list (this will be used **instead** of `progress`)  
+`color_list`: **Optional**, the list of colors the segments will be  
+
+### Defaults:
+Same as Semi-Radial Progress Bar **EXCEPT**  
+`items`: Defaults to an empty list  
+`progress_list`: Defaults to an empty list  
+`color_list`: Chooses a random color for each segment that wasn't manually assigned a color.
+
+### Example Request:
+`[url]/multiSemiRadialProgress.png?items=hello,hi,hi,hi&progress_list=0.25,0.25,0.25,0.125&color_list=%23000000,%23ff0000,%2300ff00,%230000ff` would result in  
+[![Multi-Semi-Radial Progress Bar](https://widgets.jerlshoba.com/multiSemiRadialProgress.png?items=hello,hi,hi,hi&progress_list=0.25,0.25,0.25,0.125&color_list=%23000000,%23ff0000,%2300ff00,%230000ff)](https://widgets.jerlshoba.com/multiSemiRadialProgress.png?items=hello,hi,hi,hi&progress_list=0.25,0.25,0.25,0.125&color_list=%23000000,%23ff0000,%2300ff00,%230000ff)
+
+## Multi-Radial Progress Bar
+
+### Endpoint:
+`[url]/multiRadialProgress.png`  
+`[url]/multiRadialProgress.jpg`  
+
+### Description:
+Generates a segmented radial progress bar.
+
+### Parameters:
+Same as Radial Progress Bar **EXCEPT**  
+`items`: List of items to be rendered (pointless at the moment, but still necessary)  
+`progress_list`: Progress values for each item in the list (this will be used **instead** of `progress`)  
+`color_list`: **Optional**, the list of colors the segments will be  
+
+### Defaults:
+Same as Radial Progress Bar **EXCEPT**  
+`items`: Defaults to an empty list  
+`progress_list`: Defaults to an empty list  
+`color_list`: Chooses a random color for each segment that wasn't manually assigned a color.
+
+### Example Request:
+`[url]/multiRadialProgress.png?items=hello,hi,hi,hi&progress_list=0.25,0.25,0.25,0.125&color_list=%23000000,%23ff0000,%2300ff00,%230000ff` would result in  
+[![Multi-Radial Progress Bar](https://widgets.jerlshoba.com/multiRadialProgress.png?items=hello,hi,hi,hi&progress_list=0.25,0.25,0.25,0.125&color_list=%23000000,%23ff0000,%2300ff00,%230000ff)](https://widgets.jerlshoba.com/multiRadialProgress.png?items=hello,hi,hi,hi&progress_list=0.25,0.25,0.25,0.125&color_list=%23000000,%23ff0000,%2300ff00,%230000ff)
 
 
 ### Note:
