@@ -10,12 +10,15 @@ const indexRouter = require('./routes/index');
 const progressRouter = require('./routes/progress');
 const semiRadialProgressRouter = require('./routes/semiRadialProgress');
 const radialProgressRouter = require('./routes/radialProgress');
+const multiProgressRouter = require('./routes/multiProgress');
+const multiSemiRadialProgressRouter = require('./routes/multiSemiRadialProgress');
+const multiRadialProgressRouter = require('./routes/multiRadialProgress');
 
 const app = express();
 
 app.use(logger('dev'));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use(sassMiddleware({
   src: path.join(__dirname, 'public'),
@@ -29,6 +32,9 @@ app.use('/', indexRouter);
 app.use('/', progressRouter);
 app.use('/', semiRadialProgressRouter);
 app.use('/', radialProgressRouter);
+app.use('/', multiProgressRouter);
+app.use('/', multiSemiRadialProgressRouter);
+app.use('/', multiRadialProgressRouter);
 
 module.exports = app;
 

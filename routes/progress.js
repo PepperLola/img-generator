@@ -32,9 +32,12 @@ const createImage = (req) => {
     textColor = req.query.text_color;
   }
   if (req.query.progress) {
-    progress = req.query.progress;
-    if (progress > 1) {
+    progress = parseFloat(req.query.progress);
+    if (Math.abs(progress) > 1) {
       progress /= 100;
+    }
+    if (progress < 0) {
+      progress = 1 + progress;
     }
   }
   if (req.query.font_size) {
