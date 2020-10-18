@@ -5,6 +5,7 @@ const logger = require('morgan');
 const sassMiddleware = require('node-sass-middleware');
 const debug = require('debug')('img-generator:server');
 const http = require('http');
+require('dotenv').config();
 
 const indexRouter = require('./routes/index');
 const progressRouter = require('./routes/progress');
@@ -13,6 +14,17 @@ const radialProgressRouter = require('./routes/radialProgress');
 const multiProgressRouter = require('./routes/multiProgress');
 const multiSemiRadialProgressRouter = require('./routes/multiSemiRadialProgress');
 const multiRadialProgressRouter = require('./routes/multiRadialProgress');
+const hypixelRouter = require('./routes/hypixel/hypixel');
+
+const { Hypixel } = require('./hypixel/HypixelApi');
+
+Hypixel.setApiKey(process.env.HYPIXEL_API_KEY);
+
+Hypixel.getUuidFromName("palight").then(uuid => {
+  Hypixel.getPlayerLevel(uuid).then(res => {
+    console.log(res);
+  });
+});
 
 const app = express();
 
@@ -35,6 +47,7 @@ app.use('/', radialProgressRouter);
 app.use('/', multiProgressRouter);
 app.use('/', multiSemiRadialProgressRouter);
 app.use('/', multiRadialProgressRouter);
+app.use('/hypixel', hypixelRouter);
 
 module.exports = app;
 
