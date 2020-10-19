@@ -21,10 +21,14 @@ router.get('/networkLevel.png', function (req, res, next) {
     Hypixel.getUuidFromName(req.query.username).then(uuid => {
         Hypixel.getPlayerLevel(uuid).then(lvl => {
             Hypixel.getPlayerExp(uuid).then(xp => {
-                let imageURL = "https://widgets.jerlshoba.com/progress.png";
+                let imageURL = `https://widgets.jerlshoba.com/${req.query.style}.png`;
 
                 req.query.progress = Hypixel.getPercentageToNextLevel(xp);
-                req.query.display_string = `Hypixel Level ${lvl}`;
+                if (!req.query.display_string) {
+                    req.query.display_string = `Hypixel Level [lvl]`;
+                }
+
+                req.query.display_string = req.query.display_string.split('[lvl]').join(lvl);
 
                 let reqKeys = Object.keys(req.query);
 
@@ -32,7 +36,7 @@ router.get('/networkLevel.png', function (req, res, next) {
 
                 for (let i in reqKeys) {
                     let key = reqKeys[i];
-                    if (key !== "username") {
+                    if (key !== "username" && key !== "style") {
                         imageURL += `${idx === 0 ? "?" : "&"}${key}=${req.query[key]}`;
                         idx ++;
                     }
