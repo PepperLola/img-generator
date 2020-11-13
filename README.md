@@ -1,6 +1,6 @@
 # Image Generator
 
-[![HitCount](http://hits.dwyl.com/PepperLola/img-generator.svg)](http://hits.dwyl.com/PepperLola/img-generator)
+![Visits](https://badges.pufler.dev/visits/PepperLola/playerinfo?style=flat-square)
 ![Website](https://img.shields.io/website?style=flat-square&url=https%3A%2F%2Fwidgets.jerlshoba.com)
 [![GitHub stars](https://img.shields.io/github/stars/PepperLola/img-generator?color=yellow&style=flat-square)](https://github.com/PepperLola/img-generator/stargazers)  
 ![GitHub top language](https://img.shields.io/github/languages/top/PepperLola/img-generator?style=flat-square)
