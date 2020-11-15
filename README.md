@@ -176,6 +176,27 @@ Same as Radial Progress Bar **EXCEPT**
 `[url]/multiRadialProgress.png?items=hello,hi,hi,hi&progress_list=0.25,0.25,0.25,0.125&color_list=%23000000,%23ff0000,%2300ff00,%230000ff` would result in  
 [![Multi-Radial Progress Bar](https://widgets.jerlshoba.com/multiRadialProgress.png?items=hello,hi,hi,hi&progress_list=0.25,0.25,0.25,0.125&color_list=%23000000,%23ff0000,%2300ff00,%230000ff)](https://widgets.jerlshoba.com/multiRadialProgress.png?items=hello,hi,hi,hi&progress_list=0.25,0.25,0.25,0.125&color_list=%23000000,%23ff0000,%2300ff00,%230000ff)
 
+## Hypixel Level
+
+### Endpoint:
+`[url]/hypixel/networkLevel.png`  
+`[url]/hypixel/networkLevel.jpg`  
+
+### Description:
+Generates a progress bar that displays your Hypixel network level.
+
+### Parameters:
+Same as chosen progress bar **EXCEPT**  
+`username`: Minecraft username  
+`style`: Style (can be any one of the previously mentioned progress bars  
+
+### Defaults:
+Same as chosen progress bar **EXCEPT**  
+
+### Example Request:
+`[url]/hypixel/networkLevel.png?username=palight&width=512&height=64&fg=%23ffffff&bg=%232288ff&border=4&text_color=%232288ff&font_size=18&style=progress` would result in  
+[![Hypixel Level Bar](https://widgets.jerlshoba.com/hypixel/networkLevel.png?username=palight&width=512&height=64&fg=%23ffffff&bg=%232288ff&border=4&text_color=%232288ff&font_size=18&style=progress)](https://widgets.jerlshoba.com/hypixel/networkLevel.png?username=palight&width=512&height=64&fg=%23ffffff&bg=%232288ff&border=4&text_color=%232288ff&font_size=18&style=progress)
+
 
 ### Note:
 All colors are in hex format.  
