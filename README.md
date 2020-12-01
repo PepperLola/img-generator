@@ -192,6 +192,7 @@ Same as chosen progress bar **EXCEPT**
 
 ### Defaults:
 Same as chosen progress bar **EXCEPT**  
+`progress`: This will be overriden by the user's progress ot the next level.
 
 ### Example Request:
 `[url]/hypixel/networkLevel.png?username=palight&width=512&height=64&fg=%23ffffff&bg=%232288ff&border=4&text_color=%232288ff&font_size=18&style=progress` would result in  
