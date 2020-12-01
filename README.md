@@ -188,7 +188,7 @@ Generates a progress bar that displays your Hypixel network level.
 ### Parameters:
 Same as chosen progress bar **EXCEPT**  
 `username`: Minecraft username  
-`style`: Style (can be any one of the previously mentioned progress bars  
+`style`: Style (can be any one of the previously mentioned progress bars)  
 
 ### Defaults:
 Same as chosen progress bar **EXCEPT**  
