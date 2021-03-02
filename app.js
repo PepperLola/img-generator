@@ -15,6 +15,7 @@ const multiProgressRouter = require('./routes/multiProgress');
 const multiSemiRadialProgressRouter = require('./routes/multiSemiRadialProgress');
 const multiRadialProgressRouter = require('./routes/multiRadialProgress');
 const hypixelRouter = require('./routes/hypixel/hypixel');
+const qaCardRouter = require('./routes/cards/qaCard');
 
 const { Hypixel } = require('./hypixel/HypixelApi');
 
@@ -48,6 +49,7 @@ app.use('/', multiProgressRouter);
 app.use('/', multiSemiRadialProgressRouter);
 app.use('/', multiRadialProgressRouter);
 app.use('/hypixel', hypixelRouter);
+app.use('/card', qaCardRouter);
 
 module.exports = app;
 

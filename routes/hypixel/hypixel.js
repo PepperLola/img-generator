@@ -61,7 +61,7 @@ router.get('/networkLevel.png', function (req, res, next) {
     });
 });
 
-router.get('/progress.jpg', function (req, res, next) {
+router.get('/networkLevel.jpg', function (req, res, next) {
     let canvas = createImage(req);
 
     res.contentType('jpg');
