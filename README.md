@@ -1,6 +1,6 @@
 # Image Generator
 
-[![HitCount](http://hits.dwyl.com/PepperLola/img-generator.svg)](http://hits.dwyl.com/PepperLola/img-generator)
+![Visits](https://badges.pufler.dev/visits/PepperLola/playerinfo?style=flat-square)
 ![Website](https://img.shields.io/website?style=flat-square&url=https%3A%2F%2Fwidgets.jerlshoba.com)
 [![GitHub stars](https://img.shields.io/github/stars/PepperLola/img-generator?color=yellow&style=flat-square)](https://github.com/PepperLola/img-generator/stargazers)  
 ![GitHub top language](https://img.shields.io/github/languages/top/PepperLola/img-generator?style=flat-square)
@@ -175,6 +175,28 @@ Same as Radial Progress Bar **EXCEPT**
 ### Example Request:
 `[url]/multiRadialProgress.png?items=hello,hi,hi,hi&progress_list=0.25,0.25,0.25,0.125&color_list=%23000000,%23ff0000,%2300ff00,%230000ff` would result in  
 [![Multi-Radial Progress Bar](https://widgets.jerlshoba.com/multiRadialProgress.png?items=hello,hi,hi,hi&progress_list=0.25,0.25,0.25,0.125&color_list=%23000000,%23ff0000,%2300ff00,%230000ff)](https://widgets.jerlshoba.com/multiRadialProgress.png?items=hello,hi,hi,hi&progress_list=0.25,0.25,0.25,0.125&color_list=%23000000,%23ff0000,%2300ff00,%230000ff)
+
+## Hypixel Level
+
+### Endpoint:
+`[url]/hypixel/networkLevel.png`  
+`[url]/hypixel/networkLevel.jpg`  
+
+### Description:
+Generates a progress bar that displays your Hypixel network level.
+
+### Parameters:
+Same as chosen progress bar **EXCEPT**  
+`username`: Minecraft username  
+`style`: Style (can be any one of the previously mentioned progress bars)  
+
+### Defaults:
+Same as chosen progress bar **EXCEPT**  
+`progress`: This will be overriden by the user's progress ot the next level.
+
+### Example Request:
+`[url]/hypixel/networkLevel.png?username=palight&width=512&height=64&fg=%23ffffff&bg=%232288ff&border=4&text_color=%232288ff&font_size=18&style=progress` would result in  
+[![Hypixel Level Bar](https://widgets.jerlshoba.com/hypixel/networkLevel.png?username=palight&width=512&height=64&fg=%23ffffff&bg=%232288ff&border=4&text_color=%232288ff&font_size=18&style=progress)](https://widgets.jerlshoba.com/hypixel/networkLevel.png?username=palight&width=512&height=64&fg=%23ffffff&bg=%232288ff&border=4&text_color=%232288ff&font_size=18&style=progress)
 
 
 ### Note:
